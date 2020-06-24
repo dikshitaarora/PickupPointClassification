@@ -1,0 +1,49 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+
+    <!-- Title Page-->
+    <title>Thankyou for Registering</title>
+
+    <!-- Main CSS-->
+    <link href="{% static 'regframe/css/main.css'%}" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+               
+                <div class="card-heading">
+                    <h2 class="title">Thankyou for Registering with us!</h2>
+                </div>
+
+                <div class="card-body">
+                    <form method="POST" action="http://127.0.0.1:8000/login/">
+                        {% csrf_token %}
+                        <div class="container">
+                            <div align="center">
+                            <button class="btn btn--radius-2 btn--red"  type="submit">Login now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Main JS-->
+    <script src="{% static 'regframe/js/global.js'%}"></script>
+
+</body>
+
+</html>
+<!-- end document-->
